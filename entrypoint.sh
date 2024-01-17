@@ -1,10 +1,11 @@
 #!/bin/bash
 
+
 # Функция для ожидания доступности порта
 wait_for_port() {
     local host="$1"
     local port="$2"
-    local timeout=10
+    local timeout=20
     local start_time=$(date +%s)
 
     # Попробовать использовать nc, если установлен

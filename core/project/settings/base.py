@@ -11,7 +11,7 @@ from pathlib import Path
 import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 env = environ.Env()
 environ.Env.read_env(BASE_DIR / '.env')
 
@@ -36,9 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 3rd party libraries,
+    # 3rd party
 
-    # local apps,
+    # 1st party
 
 ]
 
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'project.urls'
+ROOT_URLCONF = 'core.project.urls'
 
 TEMPLATES = [
     {
@@ -71,20 +71,21 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'project.wsgi.application'
+WSGI_APPLICATION = 'core.project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('POSTGRES_DB', default='postgres'),
-        'USER': env('POSTGRES_USER', default='postgres'),
-        'PASSWORD': env('POSTGRES_PASSWORD', default='postgres'),
-        'HOST': env('POSTGRES_HOST', default='localhost'),
-        'PORT': env('POSTGRES_PORT', default=5432),
-        # 'HOST': 'localhost',
+        'NAME': env('POSTGRES_DB'),
+        'USER': env('POSTGRES_USER'),
+        'PASSWORD': env('POSTGRES_PASSWORD'),
+        'PORT': env('POSTGRES_PORT'),
+        # for local dev if only db in docker use localhost
+        'HOST': env('POSTGRES_HOST'),
     }
 
 }

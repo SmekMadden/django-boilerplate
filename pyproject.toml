@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "pymarket"
+name = "template"
 version = "0.1.0"
-description = ""
+description = "_"
 authors = ["Vlad Smek <smek1negithub@gmail.com>"]
 readme = "README.md"
 

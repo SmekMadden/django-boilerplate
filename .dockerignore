@@ -9,5 +9,5 @@ venv.bak/
 # settings
 local_settings.py
 #local.py
-/project/settings/local.py
+/core/project/settings/local.py
 
