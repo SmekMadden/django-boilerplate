@@ -10,6 +10,7 @@ from pathlib import Path
 
 import environ
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 env = environ.Env()
@@ -37,9 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 3rd party
-
     # 1st party
-
 ]
 
 MIDDLEWARE = [
@@ -57,8 +56,7 @@ ROOT_URLCONF = 'core.project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,8 +84,7 @@ DATABASES = {
         'PORT': env('POSTGRES_PORT'),
         # for local dev if only db in docker use localhost
         'HOST': env('POSTGRES_HOST'),
-    }
-
+    },
 }
 
 # Password validation

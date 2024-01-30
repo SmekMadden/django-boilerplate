@@ -1,5 +1,3 @@
-# Django Boilerplate
-
 ## Requirements
 
 - [Docker](https://www.docker.com/get-started)
@@ -36,7 +34,7 @@
 * `make app-down` - down application and all infrastructure
 * `make storages` - up only storages. you should run your application locally for debugging/developing purposes
 * `make storages-logs` - logs in storages containers
-  `make storages-down` - down all infrastructure
+* `make storages-down` - down all infrastructure
 
   #### Django Specific
 
@@ -50,7 +48,11 @@
 - `web`: Django application server.
 - `postgree`: PostgreSQL database server.
 
+## Pre-commit
 
+```
+pre-commit run --all-files
+```
 
 ## Additional
 
