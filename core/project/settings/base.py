@@ -21,7 +21,7 @@ environ.Env.read_env(BASE_DIR / '.env')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = env('DJANGO_SECRET_KEY', default='DO_NOT_FORGET_TO_MAKE_ME_IN_YOUR_ENV')
+SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -84,6 +84,7 @@ DATABASES = {
         'PORT': env('POSTGRES_PORT'),
         # for local dev if only db in docker use localhost
         'HOST': env('POSTGRES_HOST'),
+        # 'HOST': 'localhost', #noqa
     },
 }
 

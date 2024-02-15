@@ -3,8 +3,8 @@
 
 # Функция для ожидания доступности порта
 wait_for_port() {
-    local host="$1"
-    local port="$2"
+    local host="${POSTGRES_HOST}"
+    local port="${POSTGRES_HOST}"
     local timeout=20
     local start_time=$(date +%s)
 
